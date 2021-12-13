@@ -47,11 +47,10 @@ namespace BD50_1_19_MySQL
 
         private void LoadCombobox()
         {
-
             MySqlConnection oaConnection = new MySqlConnection
                 ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
             MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter
-                ("Select * from delivery_of_material where id_delivery_for_material = id_delivery_for_material;", oaConnection);
+                ("Select * from delivery_of_material", oaConnection);
             DataTable oaDataTable = new DataTable();
             oaDataAdapter.Fill(oaDataTable);
             comboBox1.DataSource = oaDataTable;
@@ -61,7 +60,7 @@ namespace BD50_1_19_MySQL
             MySqlConnection oaConnection1= new MySqlConnection
                ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
             MySqlDataAdapter oaDataAdapter1= new MySqlDataAdapter
-                ("Select * from provider where id_provider = id_provider;", oaConnection1);
+                ("Select * from provider", oaConnection1);
             DataTable oaDataTable1= new DataTable();
             oaDataAdapter1.Fill(oaDataTable1);
             comboBox2.DataSource = oaDataTable1;
@@ -71,7 +70,7 @@ namespace BD50_1_19_MySQL
             MySqlConnection oaConnection2 = new MySqlConnection
                ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
             MySqlDataAdapter oaDataAdapter2 = new MySqlDataAdapter
-                ("Select * from material where id_material = id_material", oaConnection2);
+                ("Select * from material", oaConnection2);
             DataTable oaDataTable2 = new DataTable();
             oaDataAdapter2.Fill(oaDataTable2);
             comboBox3.DataSource = oaDataTable2;
@@ -81,31 +80,27 @@ namespace BD50_1_19_MySQL
             MySqlConnection oaConnection3 = new MySqlConnection
                ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
             MySqlDataAdapter oaDataAdapter3 = new MySqlDataAdapter
-                ("Select * from delivery_of_material", oaConnection3);
+                ("Select * from staff", oaConnection3);
             DataTable oaDataTable3 = new DataTable();
             oaDataAdapter3.Fill(oaDataTable3);
             comboBox4.DataSource = oaDataTable3;
-            comboBox4.DisplayMember = "id_staff";
+            comboBox4.DisplayMember = "last_name";
             comboBox4.ValueMember = "id_staff";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
-            {
+       
                 MySqlConnection oaConnection = new MySqlConnection
           ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
                 MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter
-                    ($@"INSERT INTO delivery_of_material (id_delivery_for_material, id_provider, id_material, id_staff) VALUES ('{comboBox1.SelectedValue}', '{comboBox2.Text}', '{comboBox3.Text}', '{comboBox4.SelectedValue}')", oaConnection);
+                    ($@"INSERT INTO delivery_of_material (id_delivery_for_material, id_provider, id_material, id_staff) VALUES ('{comboBox1.SelectedValue}', '{comboBox2.SelectedValue}', '{comboBox3.SelectedValue}', '{comboBox4.SelectedValue}')", oaConnection);
                 DataTable oaDataTable = new DataTable();
                 oaDataAdapter.Fill(oaDataTable);
                 Close();
             }
-            catch (MySqlException)
-            {
-                MessageBox.Show("Невозможно произвести данное действие с данным атрибутом таблицы - он уже используется в других таблицах");
-            }
-        }
+
+        
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -114,7 +109,7 @@ namespace BD50_1_19_MySQL
                 MySqlConnection oaConnection = new MySqlConnection
         ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
                 MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter
-                    ($@"UPDATE delivery_of_material SET id_provider='{comboBox2.Text}', id_material='{comboBox3.Text}', id_staff='{comboBox4.Text}' WHERE id_delivery_for_material={comboBox1.SelectedValue}", oaConnection);
+                    ($@"UPDATE delivery_of_material SET id_provider='{comboBox2.SelectedValue}', id_material='{comboBox3.SelectedValue}', id_staff='{comboBox4.SelectedValue}'  WHERE id_delivery_for_material={comboBox1.SelectedValue}", oaConnection);
                 DataTable oaDataTable = new DataTable();
                 oaDataAdapter.Fill(oaDataTable);
                 Close();
@@ -132,7 +127,7 @@ namespace BD50_1_19_MySQL
                 MySqlConnection oaConnection = new MySqlConnection
          ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
                 MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter
-                    ($@"DELETE FROM delivery_of_material WHERE id_delivery_for_material={comboBox1.SelectedValue}", oaConnection);
+                    ($@"DELETE FROM delivery_of_material WHERE id_delivery_for_material={id}", oaConnection);
                 DataTable oaDataTable = new DataTable();
                 oaDataAdapter.Fill(oaDataTable);
                 Close();

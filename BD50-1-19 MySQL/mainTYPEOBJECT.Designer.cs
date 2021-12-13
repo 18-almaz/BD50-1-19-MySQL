@@ -119,6 +119,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "mainTYPEOBJECT";
             this.Text = "mainTYPEOBJECT";
+            this.Load += new System.EventHandler(this.mainTYPEOBJECT_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

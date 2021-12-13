@@ -74,11 +74,11 @@ namespace BD50_1_19_MySQL
             MySqlConnection oaConnection = new MySqlConnection
              ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
             MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter
-                  ("Select id_tech from technic", oaConnection);
+                  ("Select * from technic", oaConnection);
             DataTable oaDataTable = new DataTable();
             oaDataAdapter.Fill(oaDataTable);
             comboBox1.DataSource = oaDataTable;
-            comboBox1.DisplayMember = "id_tech";
+            comboBox1.DisplayMember = "name_of_tech";
             comboBox1.ValueMember = "id_tech";
             comboBox1.SelectedIndexChanged += new EventHandler(ComboBoxSelectedIndexChanged);
         }
@@ -87,7 +87,7 @@ namespace BD50_1_19_MySQL
 
             if (comboBox1.SelectedIndex != -1)
             {
-                query += $@" and technic.Id_tech = {comboBox1.SelectedValue} ";
+                query += $@" and technic.Id_tech = {comboBox1.SelectedValue}";
                 LoadTable();
             }
         }

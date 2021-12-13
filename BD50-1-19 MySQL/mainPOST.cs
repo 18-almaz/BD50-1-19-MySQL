@@ -73,11 +73,11 @@ namespace BD50_1_19_MySQL
             MySqlConnection oaConnection = new MySqlConnection
              ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
             MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter
-                  ("Select id_post from post", oaConnection);
+                  ("Select * from post", oaConnection);
             DataTable oaDataTable = new DataTable();
             oaDataAdapter.Fill(oaDataTable);
             comboBox1.DataSource = oaDataTable;
-            comboBox1.DisplayMember = "id_post";
+            comboBox1.DisplayMember = "name_of_post";
             comboBox1.ValueMember = "id_post";
             comboBox1.SelectedIndexChanged += new EventHandler(ComboBoxSelectedIndexChanged);
         }

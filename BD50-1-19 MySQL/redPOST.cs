@@ -54,7 +54,7 @@ namespace BD50_1_19_MySQL
                 oaDataAdapter.Fill(oaDataTable);
                 comboBox1.DataSource = oaDataTable;
                 comboBox1.DisplayMember = "id_post";
-                comboBox1.ValueMember = "name_of_post";
+                comboBox1.ValueMember = "id_post";
             }
             catch (MySqlException)
             {
@@ -104,7 +104,7 @@ namespace BD50_1_19_MySQL
                 MySqlConnection oaConnection = new MySqlConnection
          ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
                 MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter
-                    ($@"DELETE FROM post WHERE id_post={comboBox1.SelectedValue}", oaConnection);
+                    ($@"DELETE FROM post WHERE id_post={id}", oaConnection);
                 DataTable oaDataTable = new DataTable();
                 oaDataAdapter.Fill(oaDataTable);
                 Close();

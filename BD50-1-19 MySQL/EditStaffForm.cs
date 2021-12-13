@@ -73,7 +73,7 @@ namespace BD50_1_19_MySQL
             MySqlConnection oaConnection = new MySqlConnection
                 ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
             MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter
-                ($@"UPDATE staff SET id_post={comboBox1.SelectedValue}, last_name={fio.Text} WHERE id_staff={id}", oaConnection);
+                ($@"UPDATE staff SET id_post='{comboBox1.SelectedValue}', last_name='{fio.Text}' WHERE id_staff={id}", oaConnection);
             DataTable oaDataTable = new DataTable();
             oaDataAdapter.Fill(oaDataTable);
             Close();

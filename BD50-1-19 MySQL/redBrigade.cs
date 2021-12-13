@@ -40,7 +40,7 @@ namespace BD50_1_19_MySQL
             DataTable oaDataTable = new DataTable();
             oaDataAdapter.Fill(oaDataTable);
             comboBox1.SelectedValue = oaDataTable.Rows[0][1];
-
+            comboBox2.SelectedValue = 0 ;
         }
 
         private void LoadCombobox()
@@ -59,29 +59,25 @@ namespace BD50_1_19_MySQL
             MySqlConnection oaConnection1 = new MySqlConnection
         ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
             MySqlDataAdapter oaDataAdapter1 = new MySqlDataAdapter
-                ("Select id_brigade, object.name_of_object from brigade, object where id_brigade = id_brigade;", oaConnection1);
+                ("Select * from object", oaConnection1);
             DataTable oaDataTable1 = new DataTable();
             oaDataAdapter1.Fill(oaDataTable1);
             comboBox2.DataSource = oaDataTable1;
             comboBox2.DisplayMember = "name_of_object";
-            comboBox2.ValueMember = "name_of_object";
+            comboBox2.ValueMember = "id_object";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try {
+       
                 MySqlConnection oaConnection = new MySqlConnection
           ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
                 MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter
-                  ($@"INSERT INTO brigade (id_object) VALUES ('{comboBox2.SelectedValue}')", oaConnection);
+                  ($@"INSERT INTO brigade (id_brigade, id_object) VALUES ('{comboBox1.SelectedValue}','{comboBox2.SelectedValue}')", oaConnection);
                 DataTable oaDataTable = new DataTable();
                 oaDataAdapter.Fill(oaDataTable);
                 Close();
-            }
-            catch (MySqlException)
-            {
-                MessageBox.Show("Невозможно произвести данное действие с данным атрибутом таблицы - он уже используется в других таблицах");
-            }
+       
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -90,7 +86,7 @@ namespace BD50_1_19_MySQL
             MySqlConnection oaConnection = new MySqlConnection
     ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
             MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter
-                ($@"UPDATE brigade SET id_object='{comboBox2.SelectedValue}' WHERE id_brigade={comboBox1.SelectedValue}", oaConnection);
+                ($@"UPDATE brigade SET id_object='{comboBox2.SelectedValue}' WHERE id_brigade={id}", oaConnection);
             DataTable oaDataTable = new DataTable();
             oaDataAdapter.Fill(oaDataTable);
             Close();

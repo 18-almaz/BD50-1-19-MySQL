@@ -53,7 +53,7 @@ namespace BD50_1_19_MySQL
             DataTable oaDataTable = new DataTable();
             oaDataAdapter.Fill(oaDataTable);
             comboBox1.DataSource = oaDataTable;
-            comboBox1.DisplayMember = "id_type_of_object";
+            comboBox1.DisplayMember = "name_of_type_of_object";
             comboBox1.ValueMember = "id_type_of_object";
         }
 
@@ -100,7 +100,7 @@ namespace BD50_1_19_MySQL
                 MySqlConnection oaConnection = new MySqlConnection
          ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
                 MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter
-                    ($@"DELETE FROM type_of_object  WHERE id_type_of_object ={comboBox1.SelectedValue}", oaConnection);
+                    ($@"DELETE FROM type_of_object  WHERE id_type_of_object ={id}", oaConnection);
                 DataTable oaDataTable = new DataTable();
                 oaDataAdapter.Fill(oaDataTable);
                 Close();
