@@ -58,7 +58,7 @@ namespace BD50_1_19_MySQL
             try
             {
                 int id = Convert.ToInt32(dataGridView1[0, e.RowIndex].Value);
-                redDelivMater rdm = new redDelivMater();
+                redDelivMater rdm = new redDelivMater(id);
                 rdm.ShowDialog();
                 LoadTable();
             }

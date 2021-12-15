@@ -39,10 +39,7 @@ namespace BD50_1_19_MySQL
                 ("Select * from delivery_of_material WHERE id_delivery_for_material=" + id, oaConnection);
             DataTable oaDataTable = new DataTable();
             oaDataAdapter.Fill(oaDataTable);
-            comboBox1.SelectedValue = oaDataTable.Rows[0][1];
-            comboBox2.SelectedValue = oaDataTable.Rows[0][2];
-            comboBox3.SelectedValue = oaDataTable.Rows[0][3];
-            comboBox4.SelectedValue = oaDataTable.Rows[0][4];
+  
         }
 
         private void LoadCombobox()
@@ -109,7 +106,7 @@ namespace BD50_1_19_MySQL
                 MySqlConnection oaConnection = new MySqlConnection
         ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
                 MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter
-                    ($@"UPDATE delivery_of_material SET id_provider='{comboBox2.SelectedValue}', id_material='{comboBox3.SelectedValue}', id_staff='{comboBox4.SelectedValue}'  WHERE id_delivery_for_material={comboBox1.SelectedValue}", oaConnection);
+                    ($@"UPDATE delivery_of_material SET id_provider='{comboBox2.SelectedValue}', id_material='{comboBox3.SelectedValue}', id_staff='{comboBox4.SelectedValue}'  WHERE id_delivery_for_material={id}", oaConnection);
                 DataTable oaDataTable = new DataTable();
                 oaDataAdapter.Fill(oaDataTable);
                 Close();

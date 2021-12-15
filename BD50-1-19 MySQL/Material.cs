@@ -39,7 +39,6 @@ namespace BD50_1_19_MySQL
                 ("Select * from material WHERE id_material=" + id, oaConnection);
             DataTable oaDataTable = new DataTable();
             oaDataAdapter.Fill(oaDataTable);
-            comboBox1.SelectedValue = oaDataTable.Rows[0][1];
             textBox1.Text = oaDataTable.Rows[0][2].ToString();
         }
 
@@ -59,8 +58,7 @@ namespace BD50_1_19_MySQL
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            try
-            {
+      
                 MySqlConnection oaConnection = new MySqlConnection
           ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
                 MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter
@@ -69,11 +67,7 @@ namespace BD50_1_19_MySQL
                 oaDataAdapter.Fill(oaDataTable);
                 Close();
             }
-            catch (MySqlException)
-            {
-                MessageBox.Show("Невозможно произвести данное действие с данным атрибутом таблицы - он уже используется в других таблицах");
-            }
-        }
+            
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -82,7 +76,7 @@ namespace BD50_1_19_MySQL
                 MySqlConnection oaConnection = new MySqlConnection
         ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
                 MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter
-                    ($@"UPDATE material SET name_of_material_type='{textBox1.Text}' WHERE id_material={comboBox1.SelectedValue}", oaConnection);
+                    ($@"UPDATE material SET name_of_material_type='{textBox1.Text}' WHERE id_material={id}", oaConnection);
                 DataTable oaDataTable = new DataTable();
                 oaDataAdapter.Fill(oaDataTable);
                 Close();
@@ -100,7 +94,7 @@ namespace BD50_1_19_MySQL
                 MySqlConnection oaConnection = new MySqlConnection
          ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
                 MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter
-                    ($@"DELETE FROM material WHERE material.id_material={comboBox1.SelectedValue}", oaConnection);
+                    ($@"DELETE FROM material WHERE material.id_material={id}", oaConnection);
                 DataTable oaDataTable = new DataTable();
                 oaDataAdapter.Fill(oaDataTable);
                 Close();

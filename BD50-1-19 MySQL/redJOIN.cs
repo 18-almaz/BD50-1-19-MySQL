@@ -121,7 +121,7 @@ namespace BD50_1_19_MySQL
                 MySqlConnection oaConnection = new MySqlConnection
          ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
                 MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter
-                    ($@"DELETE FROM joining_in_brigade WHERE id_join_to_brigade={comboBox1.SelectedValue}", oaConnection);
+                    ($@"DELETE FROM joining_in_brigade WHERE id_join_to_brigade={id}", oaConnection);
                 DataTable oaDataTable = new DataTable();
                 oaDataAdapter.Fill(oaDataTable);
                 Close();

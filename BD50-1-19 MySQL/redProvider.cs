@@ -83,7 +83,7 @@ namespace BD50_1_19_MySQL
                 MySqlConnection oaConnection = new MySqlConnection
         ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
                 MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter
-                    ($@"UPDATE provider SET provider_for_material='{textBox1.Text}', provider_for_tech='{textBox2.Text}' WHERE id_provider={comboBox1.SelectedValue}", oaConnection);
+                    ($@"UPDATE provider SET provider_for_material='{textBox1.Text}', provider_for_tech='{textBox2.Text}' WHERE id_provider={id}", oaConnection);
                 DataTable oaDataTable = new DataTable();
                 oaDataAdapter.Fill(oaDataTable);
                 Close();
@@ -101,7 +101,7 @@ namespace BD50_1_19_MySQL
                 MySqlConnection oaConnection = new MySqlConnection
          ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
                 MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter
-                    ($@"DELETE FROM provider WHERE id_provider={comboBox1.SelectedValue}", oaConnection);
+                    ($@"DELETE FROM provider WHERE id_provider={id}", oaConnection);
                 DataTable oaDataTable = new DataTable();
                 oaDataAdapter.Fill(oaDataTable);
                 Close();

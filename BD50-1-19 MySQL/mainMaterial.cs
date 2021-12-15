@@ -47,7 +47,7 @@ namespace BD50_1_19_MySQL
             try
             {
                 int id = Convert.ToInt32(dataGridView1[0, e.RowIndex].Value);
-                Material mat = new Material();
+                Material mat = new Material(id);
                 mat.ShowDialog();
                 LoadTable();
             }
