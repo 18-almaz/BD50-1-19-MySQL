@@ -69,7 +69,8 @@ namespace BD50_1_19_MySQL
 
         private void button1_Click(object sender, EventArgs e)
         {
-       
+            try
+            {
                 MySqlConnection oaConnection = new MySqlConnection
           ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
                 MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter
@@ -77,7 +78,11 @@ namespace BD50_1_19_MySQL
                 DataTable oaDataTable = new DataTable();
                 oaDataAdapter.Fill(oaDataTable);
                 Close();
-       
+            }
+            catch (MySqlException)
+            {
+                MessageBox.Show("Невозможно произвести данное действие с данным атрибутом таблицы. Возможны внутренние ошибки или вы указали уже существующий номер бригады!");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

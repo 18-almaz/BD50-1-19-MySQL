@@ -91,7 +91,7 @@ namespace BD50_1_19_MySQL
                 MySqlConnection oaConnection = new MySqlConnection
           ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
                 MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter
-                    ($@"INSERT INTO delivery_of_material (id_delivery_for_material, id_provider, id_material, id_staff) VALUES ('{comboBox1.SelectedValue}', '{comboBox2.SelectedValue}', '{comboBox3.SelectedValue}', '{comboBox4.SelectedValue}')", oaConnection);
+                    ($@"INSERT INTO delivery_of_material (id_provider, id_material, id_staff) VALUES ('{comboBox2.SelectedValue}', '{comboBox3.SelectedValue}', '{comboBox4.SelectedValue}')", oaConnection);
                 DataTable oaDataTable = new DataTable();
                 oaDataAdapter.Fill(oaDataTable);
                 Close();

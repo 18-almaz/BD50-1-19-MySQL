@@ -39,7 +39,7 @@ namespace BD50_1_19_MySQL
                 ("Select * from material WHERE id_material=" + id, oaConnection);
             DataTable oaDataTable = new DataTable();
             oaDataAdapter.Fill(oaDataTable);
-            textBox1.Text = oaDataTable.Rows[0][2].ToString();
+
         }
 
         private void LoadCombobox()

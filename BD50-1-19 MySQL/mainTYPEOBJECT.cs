@@ -22,7 +22,8 @@ namespace BD50_1_19_MySQL
         }
 
         string query;
-        const string _query = "Select id_type_of_object AS 'Номер типа объекта', name_of_type_of_object AS 'Наименование типа объекта' FROM type_of_object ";
+        const string _query = "Select id_type_of_object AS 'Номер типа объекта', name_of_type_of_object AS 'Наименование типа объекта'" +
+            " FROM type_of_object Where id_type_of_object = id_type_of_object ";
         private void LoadTable()
         {
 
@@ -85,7 +86,7 @@ namespace BD50_1_19_MySQL
             {
                 if (comboBox1.SelectedIndex != -1)
                 {
-                    query += $@" where id_type_of_object = {comboBox1.SelectedValue} ";
+                    query += $@" and id_type_of_object = {comboBox1.SelectedValue} ";
                     LoadTable();
                 }
             }

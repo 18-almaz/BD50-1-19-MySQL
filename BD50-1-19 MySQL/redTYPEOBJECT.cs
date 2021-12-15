@@ -63,7 +63,7 @@ namespace BD50_1_19_MySQL
                 MySqlConnection oaConnection = new MySqlConnection
           ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
                 MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter
-                    ($@"INSERT INTO type_of_object (id_type_of_object, name_of_type_of_object) VALUES ('{comboBox1.SelectedValue}','{textBox1.Text}')", oaConnection);
+                    ($@"INSERT INTO type_of_object (name_of_type_of_object) VALUES ('{textBox1.Text}')", oaConnection);
                 DataTable oaDataTable = new DataTable();
                 oaDataAdapter.Fill(oaDataTable);
                 Close();

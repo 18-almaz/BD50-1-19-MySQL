@@ -93,5 +93,11 @@ namespace BD50_1_19_MySQL
             mainDelivTech mdtc = new mainDelivTech();
             mdtc.ShowDialog();
         }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            info inf = new info();
+            inf.ShowDialog();
+        }
     }
 }

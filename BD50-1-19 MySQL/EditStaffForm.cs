@@ -33,40 +33,60 @@ namespace BD50_1_19_MySQL
 
         private void LoadString()
         {
-            MySqlConnection oaConnection = new MySqlConnection
-                  ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
-            MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter
-                ("Select * from staff WHERE id_staff=" + id, oaConnection);
-            DataTable oaDataTable = new DataTable();
-            oaDataAdapter.Fill(oaDataTable);
-            comboBox1.SelectedValue = oaDataTable.Rows[0][1];
-            fio.Text = oaDataTable.Rows[0][2].ToString();
+            try {
+                MySqlConnection oaConnection = new MySqlConnection
+                      ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
+                MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter
+                    ("Select * from staff WHERE id_staff=" + id, oaConnection);
+                DataTable oaDataTable = new DataTable();
+                oaDataAdapter.Fill(oaDataTable);
+                comboBox1.SelectedValue = oaDataTable.Rows[0][1];
+                fio.Text = oaDataTable.Rows[0][2].ToString();
+            }
+            catch (MySqlException)
+            {
+                MessageBox.Show("Невозможно произвести данное действие с данным атрибутом таблицы - он уже используется в других таблицах");
+            }
         }
 
         private void LoadCombobox()
         {
-
-            MySqlConnection oaConnection = new MySqlConnection
-                ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
-            MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter
-                ("Select * from post", oaConnection);
-            DataTable oaDataTable = new DataTable();
-            oaDataAdapter.Fill(oaDataTable);
-            comboBox1.DataSource = oaDataTable;
-            comboBox1.DisplayMember = "name_of_post";
-            comboBox1.ValueMember = "id_post";
+            try
+            {
+                MySqlConnection oaConnection = new MySqlConnection
+                    ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
+                MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter
+                    ("Select * from post", oaConnection);
+                DataTable oaDataTable = new DataTable();
+                oaDataAdapter.Fill(oaDataTable);
+                comboBox1.DataSource = oaDataTable;
+                comboBox1.DisplayMember = "name_of_post";
+                comboBox1.ValueMember = "id_post";
+            }
+            catch (MySqlException)
+            {
+                MessageBox.Show("Невозможно произвести данное действие с данным атрибутом таблицы - он уже используется в других таблицах");
+            }
         }
 
         private void insertButton_Click(object sender, EventArgs e)
         {
-            MySqlConnection oaConnection = new MySqlConnection
-                ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
-            MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter
-                ($@"INSERT INTO staff (id_post,last_name) VALUES ({comboBox1.SelectedValue},'{fio.Text}')", oaConnection);
-            DataTable oaDataTable = new DataTable();
-            oaDataAdapter.Fill(oaDataTable);
-            Close();
+            try
+            {
+                MySqlConnection oaConnection = new MySqlConnection
+                    ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
+                MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter
+                    ($@"INSERT INTO staff (id_post,last_name) VALUES ({comboBox1.SelectedValue},'{fio.Text}')", oaConnection);
+                DataTable oaDataTable = new DataTable();
+                oaDataAdapter.Fill(oaDataTable);
+                Close();
+            }
+            catch (MySqlException)
+            {
+                MessageBox.Show("Невозможно произвести данное действие с данным атрибутом таблицы - он уже используется в других таблицах");
+            }
         }
+
 
         private void updateButton_Click(object sender, EventArgs e)
         {

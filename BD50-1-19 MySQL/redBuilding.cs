@@ -39,8 +39,6 @@ namespace BD50_1_19_MySQL
                 ("Select * from building WHERE id_building=" + id, oaConnection);
             DataTable oaDataTable = new DataTable();
             oaDataAdapter.Fill(oaDataTable);
-            comboBox1.SelectedValue = oaDataTable.Rows[0][1];
-            comboBox2.SelectedValue = oaDataTable.Rows[0][2];
         }
 
         private void LoadCombobox()
