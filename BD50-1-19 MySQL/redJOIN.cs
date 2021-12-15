@@ -60,11 +60,11 @@ namespace BD50_1_19_MySQL
             MySqlConnection oaConnection1 = new MySqlConnection
                  ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
             MySqlDataAdapter oaDataAdapter1 = new MySqlDataAdapter
-                ("Select * FROM joining_in_brigade", oaConnection1);
+                ("Select joining_in_brigade.id_staff, staff.last_name FROM joining_in_brigade, staff where joining_in_brigade.id_staff = staff.id_staff", oaConnection1);
             DataTable oaDataTable1 = new DataTable();
             oaDataAdapter1.Fill(oaDataTable1);
             comboBox2.DataSource = oaDataTable1;
-            comboBox2.DisplayMember = "id_staff";
+            comboBox2.DisplayMember = "last_name";
             comboBox2.ValueMember = "id_staff";
 
             MySqlConnection oaConnection2 = new MySqlConnection
@@ -103,7 +103,7 @@ namespace BD50_1_19_MySQL
                 MySqlConnection oaConnection = new MySqlConnection
         ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
                 MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter
-                    ($@"UPDATE joining_in_brigade SET id_staff='{comboBox2.SelectedValue}', id_brigade='{comboBox3.SelectedValue}' WHERE id_join_to_brigade={comboBox1.SelectedValue}", oaConnection);
+                    ($@"UPDATE joining_in_brigade SET id_staff='{comboBox2.SelectedValue}', id_brigade='{comboBox3.SelectedValue}' WHERE id_join_to_brigade={id}", oaConnection);
                 DataTable oaDataTable = new DataTable();
                 oaDataAdapter.Fill(oaDataTable);
                 Close();

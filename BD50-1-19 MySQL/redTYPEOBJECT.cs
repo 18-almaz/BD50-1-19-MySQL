@@ -39,7 +39,6 @@ namespace BD50_1_19_MySQL
                 ("Select * from type_of_object  WHERE id_type_of_object =" + id, oaConnection);
             DataTable oaDataTable = new DataTable();
             oaDataAdapter.Fill(oaDataTable);
-            comboBox1.SelectedValue = oaDataTable.Rows[0][1];
             textBox1.Text = oaDataTable.Rows[0][2].ToString();
         }
 
@@ -64,7 +63,7 @@ namespace BD50_1_19_MySQL
                 MySqlConnection oaConnection = new MySqlConnection
           ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
                 MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter
-                    ($@"INSERT INTO type_of_object (name_of_type_of_object) VALUES ('{textBox1.Text}')", oaConnection);
+                    ($@"INSERT INTO type_of_object (id_type_of_object, name_of_type_of_object) VALUES ('{comboBox1.SelectedValue}','{textBox1.Text}')", oaConnection);
                 DataTable oaDataTable = new DataTable();
                 oaDataAdapter.Fill(oaDataTable);
                 Close();
@@ -82,7 +81,7 @@ namespace BD50_1_19_MySQL
                 MySqlConnection oaConnection = new MySqlConnection
         ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
                 MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter
-                    ($@"UPDATE type_of_object SET name_of_type_of_object='{textBox1.Text}' WHERE id_type_of_object ={comboBox1.SelectedValue}", oaConnection);
+                    ($@"UPDATE type_of_object SET name_of_type_of_object='{textBox1.Text}' WHERE id_type_of_object ={id}", oaConnection);
                 DataTable oaDataTable = new DataTable();
                 oaDataAdapter.Fill(oaDataTable);
                 Close();
@@ -100,7 +99,7 @@ namespace BD50_1_19_MySQL
                 MySqlConnection oaConnection = new MySqlConnection
          ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
                 MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter
-                    ($@"DELETE FROM type_of_object  WHERE id_type_of_object ={id}", oaConnection);
+                    ($@"DELETE FROM type_of_object WHERE id_type_of_object = {id}", oaConnection);
                 DataTable oaDataTable = new DataTable();
                 oaDataAdapter.Fill(oaDataTable);
                 Close();

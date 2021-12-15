@@ -42,7 +42,7 @@
             this.deleteButton.AutoSize = true;
             this.deleteButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.deleteButton.Depth = 0;
-            this.deleteButton.Location = new System.Drawing.Point(458, 134);
+            this.deleteButton.Location = new System.Drawing.Point(522, 134);
             this.deleteButton.Margin = new System.Windows.Forms.Padding(4);
             this.deleteButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.deleteButton.Name = "deleteButton";
@@ -59,7 +59,7 @@
             this.updateButton.AutoSize = true;
             this.updateButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.updateButton.Depth = 0;
-            this.updateButton.Location = new System.Drawing.Point(263, 134);
+            this.updateButton.Location = new System.Drawing.Point(327, 134);
             this.updateButton.Margin = new System.Windows.Forms.Padding(4);
             this.updateButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.updateButton.Name = "updateButton";
@@ -76,7 +76,7 @@
             this.insertButton.AutoSize = true;
             this.insertButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.insertButton.Depth = 0;
-            this.insertButton.Location = new System.Drawing.Point(69, 134);
+            this.insertButton.Location = new System.Drawing.Point(133, 134);
             this.insertButton.Margin = new System.Windows.Forms.Padding(4);
             this.insertButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.insertButton.Name = "insertButton";
@@ -92,7 +92,7 @@
             // 
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(88, 13);
+            this.comboBox1.Location = new System.Drawing.Point(152, 13);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(492, 37);
@@ -101,7 +101,7 @@
             // fio
             // 
             this.fio.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.fio.Location = new System.Drawing.Point(88, 75);
+            this.fio.Location = new System.Drawing.Point(152, 75);
             this.fio.Margin = new System.Windows.Forms.Padding(4);
             this.fio.Name = "fio";
             this.fio.Size = new System.Drawing.Size(492, 36);
@@ -110,27 +110,27 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 13);
+            this.label1.Location = new System.Drawing.Point(40, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 17);
+            this.label1.Size = new System.Drawing.Size(105, 17);
             this.label1.TabIndex = 9;
-            this.label1.Text = "id_tech";
+            this.label1.Text = "номер техники";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 89);
+            this.label2.Location = new System.Drawing.Point(19, 75);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 17);
+            this.label2.Size = new System.Drawing.Size(126, 17);
             this.label2.TabIndex = 10;
-            this.label2.Text = "name tech";
+            this.label2.Text = "название техники";
             // 
             // redTech
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Thistle;
-            this.ClientSize = new System.Drawing.Size(594, 172);
+            this.ClientSize = new System.Drawing.Size(678, 172);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.deleteButton);
@@ -139,7 +139,7 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.fio);
             this.Name = "redTech";
-            this.Text = "redTech";
+            this.Text = "Редактировать технику";
             this.Load += new System.EventHandler(this.redTech_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

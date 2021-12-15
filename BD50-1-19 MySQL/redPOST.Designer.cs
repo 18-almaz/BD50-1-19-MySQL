@@ -69,7 +69,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(121, 61);
+            this.textBox1.Location = new System.Drawing.Point(121, 69);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(405, 22);
             this.textBox1.TabIndex = 6;
@@ -85,20 +85,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 22);
+            this.label1.Location = new System.Drawing.Point(8, 2);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 17);
+            this.label1.Size = new System.Drawing.Size(124, 17);
             this.label1.TabIndex = 10;
-            this.label1.Text = "id post";
+            this.label1.Text = "номер должности";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 61);
+            this.label2.Location = new System.Drawing.Point(-1, 49);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 17);
+            this.label2.Size = new System.Drawing.Size(145, 17);
             this.label2.TabIndex = 11;
-            this.label2.Text = "name of post";
+            this.label2.Text = "название должности";
             // 
             // redPOST
             // 
@@ -114,7 +114,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.comboBox1);
             this.Name = "redPOST";
-            this.Text = "redPOST";
+            this.Text = "Редактировать должность";
             this.Load += new System.EventHandler(this.redPOST_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

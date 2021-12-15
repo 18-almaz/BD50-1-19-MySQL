@@ -21,7 +21,9 @@ namespace BD50_1_19_MySQL
         }
 
         string query;
-        const string _query = "Select id_join_to_brigade, id_staff, id_brigade FROM joining_in_brigade WHERE id_join_to_brigade = id_join_to_brigade";
+        const string _query = "Select id_join_to_brigade as 'Номер объединения', joining_in_brigade.id_staff as 'Номер персонала', " +
+            "staff.last_name as 'Фамилия персонала', joining_in_brigade.id_brigade as 'Номер бригады' FROM joining_in_brigade, staff " +
+            "WHERE joining_in_brigade.id_staff = staff.id_staff";
 
         private void LoadTable()
         {
@@ -32,7 +34,7 @@ namespace BD50_1_19_MySQL
             DataTable oaDataTable = new DataTable();
             oaDataAdapter.Fill(oaDataTable);
             dataGridView1.DataSource = oaDataTable;
-            dataGridView1.Columns[0].Visible = false;
+
         }
 
         private void button1_Click(object sender, EventArgs e)

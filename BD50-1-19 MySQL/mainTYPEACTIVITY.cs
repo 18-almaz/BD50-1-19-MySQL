@@ -22,17 +22,17 @@ namespace BD50_1_19_MySQL
         }
 
         string query;
-        const string _query = "Select id_activity_type, name_of_activity_type FROM type_of_activity WHERE id_activity_type = id_activity_type";
+        const string _query = "Select id_activity_type as 'Номер вида работ', name_of_activity_type as 'Нахвание вида работ' FROM type_of_activity";
         private void LoadTable()
         {
 
             MySqlConnection oaConnection = new MySqlConnection
             ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
-            MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter(query, oaConnection); //("Select staff.id_staff, staff.id_post, staff.last_name FROM staff, post WHERE staff.id_post = post.id_post ", oaConnection);
+            MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter(query, oaConnection);
             DataTable oaDataTable = new DataTable();
             oaDataAdapter.Fill(oaDataTable);
             dataGridView1.DataSource = oaDataTable;
-            dataGridView1.Columns[0].Visible = false;
+  
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -47,7 +47,7 @@ namespace BD50_1_19_MySQL
             try
             {
                 int id = Convert.ToInt32(dataGridView1[0, e.RowIndex].Value);
-                redTYPEACT rta = new redTYPEACT();
+                redTYPEACT rta = new redTYPEACT(id);
                 rta.ShowDialog();
                 LoadTable();
             }
@@ -73,11 +73,11 @@ namespace BD50_1_19_MySQL
             MySqlConnection oaConnection = new MySqlConnection
              ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
             MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter
-                  ("Select id_activity_type from type_of_activity", oaConnection);
+                  ("Select * from type_of_activity", oaConnection);
             DataTable oaDataTable = new DataTable();
             oaDataAdapter.Fill(oaDataTable);
             comboBox1.DataSource = oaDataTable;
-            comboBox1.DisplayMember = "id_activity_type";
+            comboBox1.DisplayMember = "name_of_activity_type";
             comboBox1.ValueMember = "id_activity_type";
             comboBox1.SelectedIndexChanged += new EventHandler(ComboBoxSelectedIndexChanged);
         }
@@ -86,7 +86,7 @@ namespace BD50_1_19_MySQL
 
             if (comboBox1.SelectedIndex != -1)
             {
-                query += $@" and type_of_activity.Id_activity_type = {comboBox1.SelectedValue} ";
+                query += $@" where type_of_activity.id_activity_type = {comboBox1.SelectedValue} ";
                 LoadTable();
             }
         }

@@ -42,7 +42,7 @@ namespace BD50_1_19_MySQL
                 ("Select * from technic WHERE id_tech=" + id, oaConnection);
             DataTable oaDataTable = new DataTable();
             oaDataAdapter.Fill(oaDataTable);
-            comboBox1.SelectedValue = oaDataTable.Rows[0][1];
+
             fio.Text = oaDataTable.Rows[0][2].ToString();
         }
 
@@ -85,7 +85,7 @@ namespace BD50_1_19_MySQL
                 MySqlConnection oaConnection = new MySqlConnection
         ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
                 MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter
-                    ($@"UPDATE technic SET name_of_tech='{fio.Text}' WHERE id_tech='{comboBox1.Text}'", oaConnection);
+                    ($@"UPDATE technic SET name_of_tech='{fio.Text}' WHERE id_tech={id}", oaConnection);
                 DataTable oaDataTable = new DataTable();
                 oaDataAdapter.Fill(oaDataTable);
                 Close();

@@ -113,20 +113,20 @@ namespace BD50_1_19_MySQL
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(65, 45);
+            this.label1.Location = new System.Drawing.Point(34, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 17);
+            this.label1.Size = new System.Drawing.Size(124, 17);
             this.label1.TabIndex = 4;
-            this.label1.Text = "id_post";
+            this.label1.Text = "номер должности";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(43, 121);
+            this.label2.Location = new System.Drawing.Point(12, 86);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 17);
+            this.label2.Size = new System.Drawing.Size(148, 17);
             this.label2.TabIndex = 5;
-            this.label2.Text = "last name";
+            this.label2.Text = "фамилия сотрудника";
             // 
             // EditStaffForm
             // 
@@ -143,7 +143,7 @@ namespace BD50_1_19_MySQL
             this.Controls.Add(this.fio);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "EditStaffForm";
-            this.Text = "editStaff";
+            this.Text = "Редактировать персонал";
             this.Load += new System.EventHandler(this.EditStaffForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

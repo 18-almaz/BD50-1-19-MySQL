@@ -22,17 +22,17 @@ namespace BD50_1_19_MySQL
         }
 
         string query;
-        const string _query = "Select id_post, name_of_post FROM post WHERE id_post = id_post";
+        const string _query = "Select id_post AS 'Номер должности', name_of_post AS 'Должность' FROM post WHERE id_post = id_post";
         private void LoadTable()
         {
 
             MySqlConnection oaConnection = new MySqlConnection
             ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
-            MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter(query, oaConnection); //("Select staff.id_staff, staff.id_post, staff.last_name FROM staff, post WHERE staff.id_post = post.id_post ", oaConnection);
+            MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter(query, oaConnection); 
             DataTable oaDataTable = new DataTable();
             oaDataAdapter.Fill(oaDataTable);
             dataGridView1.DataSource = oaDataTable;
-            dataGridView1.Columns[0].Visible = false;
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -47,7 +47,7 @@ namespace BD50_1_19_MySQL
             try
             {
                 int id = Convert.ToInt32(dataGridView1[0, e.RowIndex].Value);
-                redPOST rpo = new redPOST();
+                redPOST rpo = new redPOST(id);
                 rpo.ShowDialog();
                 LoadTable();
             }

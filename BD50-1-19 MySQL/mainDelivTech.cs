@@ -21,7 +21,18 @@ namespace BD50_1_19_MySQL
         }
 
         string query;
-        const string _query = "Select id_delivery_for_tech, id_provider, id_tech, id_staff FROM delivery_of_technic WHERE id_delivery_for_tech = id_delivery_for_tech";
+        const string _query = "Select id_delivery_for_tech as 'Номер поставки техники'," +
+            "delivery_of_technic.id_provider as 'Номер поставщика'," +
+            "delivery_of_technic.id_tech as 'Номер техники', " +
+            "delivery_of_technic.id_staff as 'Номер персонала', " +
+            "provider.provider_for_tech as 'Поставщик техники', " +
+            "staff.last_name as 'Фамилия персонала', " +
+            "technic.name_of_tech AS 'Название техники' " +
+            "FROM delivery_of_technic, provider, staff, technic " +
+            "WHERE " +
+            "delivery_of_technic.id_staff = staff.id_staff " +
+            "AND delivery_of_technic.id_provider=provider.id_provider " +
+            "AND delivery_of_technic.id_tech = technic.id_tech";
 
         private void LoadTable()
         {
@@ -32,7 +43,7 @@ namespace BD50_1_19_MySQL
             DataTable oaDataTable = new DataTable();
             oaDataAdapter.Fill(oaDataTable);
             dataGridView1.DataSource = oaDataTable;
-            dataGridView1.Columns[0].Visible = false;
+
         }
 
         private void button1_Click(object sender, EventArgs e)

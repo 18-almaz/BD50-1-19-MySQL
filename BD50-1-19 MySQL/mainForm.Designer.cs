@@ -114,9 +114,9 @@ namespace BD50_1_19_MySQL
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(32, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 17);
+            this.label1.Size = new System.Drawing.Size(124, 17);
             this.label1.TabIndex = 3;
-            this.label1.Text = "id post";
+            this.label1.Text = "номер должности";
             // 
             // comboBox1
             // 
@@ -141,7 +141,7 @@ namespace BD50_1_19_MySQL
             this.Controls.Add(this.dataGridView1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "mainForm";
-            this.Text = "Form1";
+            this.Text = "Персонал";
             this.Load += new System.EventHandler(this.mainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);

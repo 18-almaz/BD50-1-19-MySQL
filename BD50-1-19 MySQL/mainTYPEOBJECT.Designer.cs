@@ -47,7 +47,7 @@
             this.checkBox1.TabIndex = 10;
             this.checkBox1.Text = "показать фильтры";
             this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.ComboBoxSelectedIndexChanged);
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // button1
             // 
@@ -81,9 +81,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(32, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 17);
+            this.label1.Size = new System.Drawing.Size(143, 17);
             this.label1.TabIndex = 3;
-            this.label1.Text = "id type of object";
+            this.label1.Text = "номер типа объекта";
             // 
             // comboBox1
             // 
@@ -118,7 +118,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "mainTYPEOBJECT";
-            this.Text = "mainTYPEOBJECT";
+            this.Text = "Тип объекта";
             this.Load += new System.EventHandler(this.mainTYPEOBJECT_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

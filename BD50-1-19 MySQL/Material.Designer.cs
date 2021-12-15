@@ -87,20 +87,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(50, 57);
+            this.label1.Location = new System.Drawing.Point(12, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 17);
+            this.label1.Size = new System.Drawing.Size(125, 17);
             this.label1.TabIndex = 5;
-            this.label1.Text = "id material";
+            this.label1.Text = "номер материала";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 96);
+            this.label2.Location = new System.Drawing.Point(2, 115);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 17);
+            this.label2.Size = new System.Drawing.Size(146, 17);
             this.label2.TabIndex = 6;
-            this.label2.Text = "name of material";
+            this.label2.Text = "название материала";
             // 
             // Material
             // 
@@ -116,7 +116,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.comboBox1);
             this.Name = "Material";
-            this.Text = "Material";
+            this.Text = "Редактировать материал";
             this.Load += new System.EventHandler(this.Material_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -22,7 +22,7 @@ namespace BD50_1_19_MySQL
         }
 
         string query;
-        const string _query = "Select id_material, name_of_material_type FROM material WHERE id_material = id_material";
+        const string _query = "Select id_material as 'Номер материала', name_of_material_type as 'Название материала' FROM material WHERE id_material = id_material";
         private void LoadTable()
         {
 
@@ -32,7 +32,7 @@ namespace BD50_1_19_MySQL
             DataTable oaDataTable = new DataTable();
             oaDataAdapter.Fill(oaDataTable);
             dataGridView1.DataSource = oaDataTable;
-            dataGridView1.Columns[0].Visible = false;
+
         }
 
         private void button1_Click(object sender, EventArgs e)

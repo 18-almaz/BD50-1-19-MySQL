@@ -21,7 +21,8 @@ namespace BD50_1_19_MySQL
         }
 
         string query;
-        const string _query = "Select id_staff, staff.id_post, name_of_post, last_name FROM staff, post WHERE staff.id_post = post.id_post";
+        const string _query = "Select id_staff as 'Номер персонала', staff.id_post as 'Номер должности', " +
+            "name_of_post as 'Название должности', last_name as 'Фамилия персонала' FROM staff, post WHERE staff.id_post = post.id_post";
 
         private void LoadTable()
         {

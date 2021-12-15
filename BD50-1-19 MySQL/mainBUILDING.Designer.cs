@@ -81,9 +81,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(32, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 17);
+            this.label1.Size = new System.Drawing.Size(115, 17);
             this.label1.TabIndex = 3;
-            this.label1.Text = "id_building";
+            this.label1.Text = "номер строения";
             // 
             // comboBox1
             // 
@@ -118,7 +118,8 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "mainBUILDING";
-            this.Text = "mainBUILDING";
+            this.Text = "Строение";
+            this.Load += new System.EventHandler(this.mainBUILDING_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -86,7 +86,7 @@ namespace BD50_1_19_MySQL
                 MySqlConnection oaConnection = new MySqlConnection
         ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
                 MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter
-                    ($@"UPDATE building SET id_brigade='{comboBox2.SelectedValue}' WHERE id_building={comboBox1.SelectedValue}", oaConnection);
+                    ($@"UPDATE building SET id_brigade='{comboBox2.SelectedValue}' WHERE id_building={id}", oaConnection);
                 DataTable oaDataTable = new DataTable();
                 oaDataAdapter.Fill(oaDataTable);
                 Close();
@@ -105,7 +105,7 @@ namespace BD50_1_19_MySQL
          ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
 
                 MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter
-                    ($@"DELETE FROM building WHERE id_building={comboBox1.SelectedValue}", oaConnection);
+                    ($@"DELETE FROM building WHERE id_building={id}", oaConnection);
                 DataTable oaDataTable = new DataTable();
                 oaDataAdapter.Fill(oaDataTable);
                 Close();

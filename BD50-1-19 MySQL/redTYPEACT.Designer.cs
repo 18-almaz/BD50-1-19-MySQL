@@ -69,7 +69,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(153, 60);
+            this.textBox1.Location = new System.Drawing.Point(153, 68);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(405, 22);
             this.textBox1.TabIndex = 6;
@@ -85,20 +85,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 21);
+            this.label1.Location = new System.Drawing.Point(2, 1);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 17);
+            this.label1.Size = new System.Drawing.Size(180, 17);
             this.label1.TabIndex = 10;
-            this.label1.Text = "id type of activity";
+            this.label1.Text = "номер вида деятельности";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 60);
+            this.label2.Location = new System.Drawing.Point(2, 48);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 17);
+            this.label2.Size = new System.Drawing.Size(166, 17);
             this.label2.TabIndex = 11;
-            this.label2.Text = "name of activity";
+            this.label2.Text = "название деятельности";
             // 
             // redTYPEACT
             // 
@@ -114,7 +114,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.comboBox1);
             this.Name = "redTYPEACT";
-            this.Text = "redTYPEACT";
+            this.Text = "Редактировать вид активности";
             this.Load += new System.EventHandler(this.redTYPEACT_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

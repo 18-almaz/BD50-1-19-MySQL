@@ -39,7 +39,7 @@ namespace BD50_1_19_MySQL
                 ("Select * from provider WHERE id_provider=" + id, oaConnection);
             DataTable oaDataTable = new DataTable();
             oaDataAdapter.Fill(oaDataTable);
-            comboBox1.SelectedValue = oaDataTable.Rows[0][1];
+  
             textBox1.Text = oaDataTable.Rows[0][2].ToString();
             textBox2.Text = oaDataTable.Rows[0][3].ToString();
         }

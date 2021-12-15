@@ -22,7 +22,7 @@ namespace BD50_1_19_MySQL
         }
 
         string query;
-        const string _query = "Select * FROM provider WHERE id_provider = id_provider";
+        const string _query = "Select id_provider as 'Номер поставщика', provider_for_material as 'Поставщик материалов', provider_for_tech as 'Поставщик техники' FROM provider WHERE id_provider = id_provider";
 
         private void LoadTable()
         {
@@ -33,7 +33,7 @@ namespace BD50_1_19_MySQL
             DataTable oaDataTable = new DataTable();
             oaDataAdapter.Fill(oaDataTable);
             dataGridView1.DataSource = oaDataTable;
-            dataGridView1.Columns[0].Visible = false;
+
         }
 
 
@@ -50,8 +50,8 @@ namespace BD50_1_19_MySQL
             try
             {
                 int id = Convert.ToInt32(dataGridView1[0, e.RowIndex].Value);
-                mainDelivMater mm = new mainDelivMater();
-                mm.ShowDialog();
+                redProvider rp = new redProvider(id);
+                rp.ShowDialog();
                 LoadTable();
             }
             catch (ArgumentOutOfRangeException) { }

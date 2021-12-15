@@ -22,7 +22,7 @@ namespace BD50_1_19_MySQL
         }
 
         string query;
-        const string _query = "Select id_brigade, brigade.id_object, name_of_object FROM brigade, object Where brigade.id_object = object.id_object ";
+        const string _query = "Select id_brigade as 'Номер бригады', brigade.id_object as 'Номер объекта', name_of_object as 'Название объекта' FROM brigade, object Where brigade.id_object = object.id_object ";
         private void LoadTable()
         {
 

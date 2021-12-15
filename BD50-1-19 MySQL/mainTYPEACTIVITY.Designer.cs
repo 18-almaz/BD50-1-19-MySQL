@@ -81,9 +81,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(32, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 17);
+            this.label1.Size = new System.Drawing.Size(180, 17);
             this.label1.TabIndex = 3;
-            this.label1.Text = "id type of activity";
+            this.label1.Text = "номер вида деятельности";
             // 
             // comboBox1
             // 
@@ -118,7 +118,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "mainTYPEACTIVITY";
-            this.Text = "mainTYPEACTIVITY";
+            this.Text = "Вид работ";
             this.Load += new System.EventHandler(this.mainTYPEACTIVITY_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -22,7 +22,7 @@ namespace BD50_1_19_MySQL
         }
 
         string query;
-        const string _query = "Select id_tech, name_of_tech FROM technic WHERE id_tech = id_tech";
+        const string _query = "Select id_tech AS 'Номер техники', name_of_tech AS 'Название техники' FROM technic WHERE id_tech = id_tech";
         private void LoadTable()
         {
 
@@ -32,7 +32,6 @@ namespace BD50_1_19_MySQL
             DataTable oaDataTable = new DataTable();
             oaDataAdapter.Fill(oaDataTable);
             dataGridView1.DataSource = oaDataTable;
-            dataGridView1.Columns[0].Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -47,7 +46,7 @@ namespace BD50_1_19_MySQL
             try
             {
                 int id = Convert.ToInt32(dataGridView1[0, e.RowIndex].Value);
-                redTech red = new redTech();
+                redTech red = new redTech(id);
                 red.ShowDialog();
                 LoadTable();
             }

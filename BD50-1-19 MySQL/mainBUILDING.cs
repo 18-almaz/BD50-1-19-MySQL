@@ -22,7 +22,7 @@ namespace BD50_1_19_MySQL
         }
 
         string query;
-        const string _query = "Select * from building WHERE id_building = id_building";
+        const string _query = "Select id_building as 'Номер строения', id_brigade as 'Номер бригады' from building WHERE id_building = id_building";
         private void LoadTable()
         {
 
@@ -32,7 +32,6 @@ namespace BD50_1_19_MySQL
             DataTable oaDataTable = new DataTable();
             oaDataAdapter.Fill(oaDataTable);
             dataGridView1.DataSource = oaDataTable;
-            dataGridView1.Columns[0].Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -47,7 +46,7 @@ namespace BD50_1_19_MySQL
             try
             {
                 int id = Convert.ToInt32(dataGridView1[0, e.RowIndex].Value);
-                Material mat = new Material();
+                Material mat = new Material(id);
                 mat.ShowDialog();
                 LoadTable();
             }
@@ -89,6 +88,11 @@ namespace BD50_1_19_MySQL
                 query += $@" and building.id_building = {comboBox1.SelectedValue} ";
                 LoadTable();
             }
+        }
+
+        private void mainBUILDING_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

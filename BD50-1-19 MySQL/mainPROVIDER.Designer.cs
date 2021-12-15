@@ -84,9 +84,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(29, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 17);
+            this.label1.Size = new System.Drawing.Size(132, 17);
             this.label1.TabIndex = 4;
-            this.label1.Text = "id provider";
+            this.label1.Text = "номер поставщика";
             // 
             // comboBox1
             // 
@@ -154,7 +154,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "mainPROVIDER";
-            this.Text = "mainPROVIDER";
+            this.Text = "Поставщик";
             this.Load += new System.EventHandler(this.mainPROVIDER_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

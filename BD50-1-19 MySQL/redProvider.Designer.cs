@@ -41,7 +41,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(433, 98);
+            this.button3.Location = new System.Drawing.Point(467, 98);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(122, 23);
             this.button3.TabIndex = 9;
@@ -51,7 +51,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(291, 98);
+            this.button2.Location = new System.Drawing.Point(325, 98);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(122, 23);
             this.button2.TabIndex = 8;
@@ -61,7 +61,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(151, 99);
+            this.button1.Location = new System.Drawing.Point(185, 99);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(122, 23);
             this.button1.TabIndex = 7;
@@ -71,7 +71,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(150, 42);
+            this.textBox1.Location = new System.Drawing.Point(184, 42);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(405, 22);
             this.textBox1.TabIndex = 6;
@@ -79,14 +79,14 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(150, 12);
+            this.comboBox1.Location = new System.Drawing.Point(184, 12);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(405, 24);
             this.comboBox1.TabIndex = 5;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(150, 70);
+            this.textBox2.Location = new System.Drawing.Point(184, 70);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(405, 22);
             this.textBox2.TabIndex = 10;
@@ -94,36 +94,36 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(65, 12);
+            this.label1.Location = new System.Drawing.Point(21, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 17);
+            this.label1.Size = new System.Drawing.Size(132, 17);
             this.label1.TabIndex = 11;
-            this.label1.Text = "id provider";
+            this.label1.Text = "номер поставщика";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(5, 42);
+            this.label2.Location = new System.Drawing.Point(5, 45);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(135, 17);
+            this.label2.Size = new System.Drawing.Size(155, 17);
             this.label2.TabIndex = 12;
-            this.label2.Text = "provider for material";
+            this.label2.Text = "поставщик материала";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 70);
+            this.label3.Location = new System.Drawing.Point(25, 73);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 17);
+            this.label3.Size = new System.Drawing.Size(135, 17);
             this.label3.TabIndex = 13;
-            this.label3.Text = "provider for tech";
+            this.label3.Text = "поставщик техники";
             // 
             // redProvider
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.ClientSize = new System.Drawing.Size(576, 132);
+            this.ClientSize = new System.Drawing.Size(612, 132);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -134,7 +134,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.comboBox1);
             this.Name = "redProvider";
-            this.Text = "redProvider";
+            this.Text = "Редактировать поставщика";
             this.Load += new System.EventHandler(this.redProvider_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

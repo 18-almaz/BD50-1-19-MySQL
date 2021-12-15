@@ -22,7 +22,7 @@ namespace BD50_1_19_MySQL
         }
 
         string query;
-        const string _query = "Select id_type_of_object, name_of_type_of_object FROM type_of_object WHERE id_type_of_object = id_type_of_object";
+        const string _query = "Select id_type_of_object AS 'Номер типа объекта', name_of_type_of_object AS 'Наименование типа объекта' FROM type_of_object ";
         private void LoadTable()
         {
 
@@ -32,7 +32,6 @@ namespace BD50_1_19_MySQL
             DataTable oaDataTable = new DataTable();
             oaDataAdapter.Fill(oaDataTable);
             dataGridView1.DataSource = oaDataTable;
-            dataGridView1.Columns[0].Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -47,7 +46,7 @@ namespace BD50_1_19_MySQL
             try
             {
                 int id = Convert.ToInt32(dataGridView1[0, e.RowIndex].Value);
-                redTYPEOBJECT rto = new redTYPEOBJECT();
+                redTYPEOBJECT rto = new redTYPEOBJECT(id);
                 rto.ShowDialog();
                 LoadTable();
             }
@@ -60,7 +59,6 @@ namespace BD50_1_19_MySQL
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-
             if (!checkBox1.Checked)
             {
                 comboBox1.SelectedIndex = -1;
@@ -83,13 +81,20 @@ namespace BD50_1_19_MySQL
         }
         void ComboBoxSelectedIndexChanged(object sender, EventArgs e)
         {
-
-            if (comboBox1.SelectedIndex != -1)
+            try
             {
-                query += $@" and type_of_object.Id_type_of_object = {comboBox1.SelectedValue} ";
-                LoadTable();
+                if (comboBox1.SelectedIndex != -1)
+                {
+                    query += $@" where id_type_of_object = {comboBox1.SelectedValue} ";
+                    LoadTable();
+                }
             }
-        }
+                        
+            catch (MySqlException)
+            {
+                MessageBox.Show("Невозможно произвести данное действие - сортировка возможна по одному атрибуту");
+            }
+}
 
         private void mainTYPEOBJECT_Load(object sender, EventArgs e)
         {

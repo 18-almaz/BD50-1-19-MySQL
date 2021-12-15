@@ -58,11 +58,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 52);
+            this.label1.Location = new System.Drawing.Point(20, 57);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 17);
+            this.label1.Size = new System.Drawing.Size(209, 17);
             this.label1.TabIndex = 3;
-            this.label1.Text = "id joining in brigade";
+            this.label1.Text = "номер объединения в бригаду";
             // 
             // comboBox1
             // 
@@ -137,7 +137,7 @@
             this.Controls.Add(this.EditFormButton);
             this.Controls.Add(this.dataGridView1);
             this.Name = "mainJOIN";
-            this.Text = "mainJOIN";
+            this.Text = "Объединение в бригаду";
             this.Load += new System.EventHandler(this.mainJOIN_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
