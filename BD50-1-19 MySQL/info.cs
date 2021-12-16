@@ -16,5 +16,10 @@ namespace BD50_1_19_MySQL
         {
             InitializeComponent();
         }
+
+        private void info_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

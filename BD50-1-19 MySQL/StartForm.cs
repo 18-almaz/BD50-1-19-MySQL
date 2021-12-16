@@ -99,5 +99,10 @@ namespace BD50_1_19_MySQL
             info inf = new info();
             inf.ShowDialog();
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

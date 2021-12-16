@@ -132,6 +132,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Name = "info";
             this.Text = "О предприятии";
+            this.Load += new System.EventHandler(this.info_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
