@@ -17,7 +17,10 @@ namespace BD50_1_19_MySQL
             InitializeComponent();
             query = _query;
             LoadTable();
+            dataGridView1.ReadOnly = true;
             LoadCombobox();
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+
         }
 
         string query;

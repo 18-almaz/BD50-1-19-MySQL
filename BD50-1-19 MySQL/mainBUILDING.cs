@@ -19,6 +19,7 @@ namespace BD50_1_19_MySQL
             query = _query;
             LoadTable();
             LoadCombobox();
+            dataGridView1.ReadOnly = true;
         }
 
         string query;
@@ -32,6 +33,7 @@ namespace BD50_1_19_MySQL
             DataTable oaDataTable = new DataTable();
             oaDataAdapter.Fill(oaDataTable);
             dataGridView1.DataSource = oaDataTable;
+            dataGridView1.Columns[0].Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -72,12 +74,12 @@ namespace BD50_1_19_MySQL
             MySqlConnection oaConnection = new MySqlConnection
              ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
             MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter
-                  ("Select id_building from building", oaConnection);
+                  ("Select id_brigade from building", oaConnection);
             DataTable oaDataTable = new DataTable();
             oaDataAdapter.Fill(oaDataTable);
             comboBox1.DataSource = oaDataTable;
-            comboBox1.DisplayMember = "id_building";
-            comboBox1.ValueMember = "id_building";
+            comboBox1.DisplayMember = "id_brigade";
+            comboBox1.ValueMember = "id_brigade";
             comboBox1.SelectedIndexChanged += new EventHandler(ComboBoxSelectedIndexChanged);
         }
         void ComboBoxSelectedIndexChanged(object sender, EventArgs e)
@@ -85,12 +87,17 @@ namespace BD50_1_19_MySQL
 
             if (comboBox1.SelectedIndex != -1)
             {
-                query += $@" and building.id_building = {comboBox1.SelectedValue} ";
+                query += $@" and building.id_brigade = {comboBox1.SelectedValue} ";
                 LoadTable();
             }
         }
 
         private void mainBUILDING_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

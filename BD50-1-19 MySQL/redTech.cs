@@ -21,6 +21,8 @@ namespace BD50_1_19_MySQL
             insertButton.Visible = true;
             updateButton.Visible = true;
             deleteButton.Visible = true;
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+
         }
         int id;
 
@@ -32,6 +34,8 @@ namespace BD50_1_19_MySQL
             LoadString();
             updateButton.Visible = true;
             deleteButton.Visible = true;
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+
         }
 
         private void LoadString()

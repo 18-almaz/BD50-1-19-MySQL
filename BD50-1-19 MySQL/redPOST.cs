@@ -18,6 +18,7 @@ namespace BD50_1_19_MySQL
             InitializeComponent();
             LoadCombobox();
             button1.Visible = true;
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
         }
         int id;
 
@@ -29,6 +30,7 @@ namespace BD50_1_19_MySQL
             LoadString();
             button2.Visible = true;
             button3.Visible = true;
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void LoadString()
@@ -69,7 +71,7 @@ namespace BD50_1_19_MySQL
                 MySqlConnection oaConnection = new MySqlConnection
           ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
                 MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter
-                    ($@"INSERT INTO post (id_post, name_of_post) VALUES ('{comboBox1.SelectedValue}','{textBox1.Text}')", oaConnection);
+                    ($@"INSERT INTO post (name_of_post) VALUES ('{textBox1.Text}')", oaConnection);
                 DataTable oaDataTable = new DataTable();
                 oaDataAdapter.Fill(oaDataTable);
                 Close();

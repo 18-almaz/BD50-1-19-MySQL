@@ -19,6 +19,8 @@ namespace BD50_1_19_MySQL
             query = _query;
             LoadTable();
             LoadCombobox();
+            dataGridView1.ReadOnly = true;
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         string query;
@@ -30,9 +32,9 @@ namespace BD50_1_19_MySQL
             ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
             MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter(query, oaConnection);
             DataTable oaDataTable = new DataTable();
-            oaDataAdapter.Fill(oaDataTable);
+             oaDataAdapter.Fill(oaDataTable);
             dataGridView1.DataSource = oaDataTable;
-
+            dataGridView1.Columns[0].Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -73,12 +75,12 @@ namespace BD50_1_19_MySQL
             MySqlConnection oaConnection = new MySqlConnection
              ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
             MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter
-                  ("Select * from brigade", oaConnection);
+                  ("Select * from object", oaConnection);
             DataTable oaDataTable = new DataTable();
             oaDataAdapter.Fill(oaDataTable);
             comboBox1.DataSource = oaDataTable;
-            comboBox1.DisplayMember = "id_brigade";
-            comboBox1.ValueMember = "id_brigade";
+            comboBox1.DisplayMember = "name_of_object";
+            comboBox1.ValueMember = "name_of_object";
             comboBox1.SelectedIndexChanged += new EventHandler(ComboBoxSelectedIndexChanged);
         }
         void ComboBoxSelectedIndexChanged(object sender, EventArgs e)
@@ -86,7 +88,7 @@ namespace BD50_1_19_MySQL
 
             if (comboBox1.SelectedIndex != -1)
             {
-                query += $@" and brigade.Id_brigade = {comboBox1.SelectedValue} ";
+                query += $@" and object.name_of_object = '{comboBox1.SelectedValue}' ";
                 LoadTable();
             }
         }

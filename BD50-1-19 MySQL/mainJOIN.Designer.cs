@@ -45,7 +45,7 @@
             this.panel1.HorizontalScrollbarBarColor = true;
             this.panel1.HorizontalScrollbarHighlightOnWheel = false;
             this.panel1.HorizontalScrollbarSize = 8;
-            this.panel1.Location = new System.Drawing.Point(51, 102);
+            this.panel1.Location = new System.Drawing.Point(8, 166);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(244, 92);
@@ -80,7 +80,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Depth = 0;
             this.checkBox1.Font = new System.Drawing.Font("Roboto", 10F);
-            this.checkBox1.Location = new System.Drawing.Point(74, 59);
+            this.checkBox1.Location = new System.Drawing.Point(31, 123);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox1.MouseLocation = new System.Drawing.Point(-1, -1);
             this.checkBox1.MouseState = MaterialSkin.MouseState.HOVER;
@@ -94,13 +94,12 @@
             // 
             // EditFormButton
             // 
-            this.EditFormButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.EditFormButton.AutoSize = true;
             this.EditFormButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.EditFormButton.BackColor = System.Drawing.Color.Transparent;
             this.EditFormButton.Depth = 0;
             this.EditFormButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditFormButton.Location = new System.Drawing.Point(74, 16);
+            this.EditFormButton.Location = new System.Drawing.Point(40, 55);
             this.EditFormButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.EditFormButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.EditFormButton.Name = "EditFormButton";
@@ -113,16 +112,18 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(338, 16);
+            this.dataGridView1.Location = new System.Drawing.Point(268, 16);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(801, 177);
+            this.dataGridView1.Size = new System.Drawing.Size(801, 242);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -131,7 +132,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(1185, 214);
+            this.ClientSize = new System.Drawing.Size(1081, 269);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.EditFormButton);

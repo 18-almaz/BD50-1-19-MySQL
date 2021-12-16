@@ -18,7 +18,10 @@ namespace BD50_1_19_MySQL
             InitializeComponent();
             query = _query;
             LoadTable();
+            dataGridView1.ReadOnly = true;
             LoadCombobox();
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+
         }
 
         string query;
@@ -33,7 +36,7 @@ namespace BD50_1_19_MySQL
             DataTable oaDataTable = new DataTable();
             oaDataAdapter.Fill(oaDataTable);
             dataGridView1.DataSource = oaDataTable;
-
+            dataGridView1.Columns[0].Visible = false;
         }
 
 
@@ -77,12 +80,12 @@ namespace BD50_1_19_MySQL
             MySqlConnection oaConnection = new MySqlConnection
              ("Server=127.0.0.1;Database=fisenko;Uid=oalmaz;Pwd=123;SslMode=none;charset=utf8");
             MySqlDataAdapter oaDataAdapter = new MySqlDataAdapter
-                  ("Select id_provider from provider", oaConnection);
+                  ("Select * from provider", oaConnection);
             DataTable oaDataTable = new DataTable();
             oaDataAdapter.Fill(oaDataTable);
             comboBox1.DataSource = oaDataTable;
-            comboBox1.DisplayMember = "id_provider";
-            comboBox1.ValueMember = "id_provider";
+            comboBox1.DisplayMember = "provider_for_material";
+            comboBox1.ValueMember = "provider_for_material";
             comboBox1.SelectedIndexChanged += new EventHandler(ComboBoxSelectedIndexChanged);
         }
         void ComboBoxSelectedIndexChanged(object sender, EventArgs e)
@@ -90,7 +93,7 @@ namespace BD50_1_19_MySQL
 
             if (comboBox1.SelectedIndex != -1)
             {
-                query += $@" and provider.id_provider = {comboBox1.SelectedValue} ";
+                query += $@" and provider.provider_for_material = '{comboBox1.SelectedValue}' ";
                 LoadTable();
             }
         }

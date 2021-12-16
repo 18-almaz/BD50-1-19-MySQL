@@ -15,9 +15,12 @@ namespace BD50_1_19_MySQL
         public mainJOIN()
         {
             InitializeComponent();
+            dataGridView1.ReadOnly = true;
             query = _query;
             LoadTable();
             LoadCombobox();
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+
         }
 
         string query;
@@ -34,7 +37,7 @@ namespace BD50_1_19_MySQL
             DataTable oaDataTable = new DataTable();
             oaDataAdapter.Fill(oaDataTable);
             dataGridView1.DataSource = oaDataTable;
-
+            dataGridView1.Columns[0].Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -79,8 +82,8 @@ namespace BD50_1_19_MySQL
             DataTable oaDataTable = new DataTable();
             oaDataAdapter.Fill(oaDataTable);
             comboBox1.DataSource = oaDataTable;
-            comboBox1.DisplayMember = "id_join_to_brigade";
-            comboBox1.ValueMember = "id_join_to_brigade";
+            comboBox1.DisplayMember = "id_staff";
+            comboBox1.ValueMember = "id_staff";
             comboBox1.SelectedIndexChanged += new EventHandler(ComboBoxSelectedIndexChanged);
 
         }
@@ -89,7 +92,7 @@ namespace BD50_1_19_MySQL
 
             if (comboBox1.SelectedIndex != -1)
             {
-                query += $@" and joining_in_brigade.id_join_to_brigade = {comboBox1.SelectedValue} ";
+                query += $@" and joining_in_brigade.id_staff = {comboBox1.SelectedValue} ";
                 LoadTable();
             }
         }

@@ -18,6 +18,10 @@ namespace BD50_1_19_MySQL
             InitializeComponent();
             LoadCombobox();
             button1.Visible = true;
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox3.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox4.DropDownStyle = ComboBoxStyle.DropDownList;
         }
         int id;
 
@@ -29,6 +33,10 @@ namespace BD50_1_19_MySQL
             LoadString();
             button2.Visible = true;
             button3.Visible = true;
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox3.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox4.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void LoadString()

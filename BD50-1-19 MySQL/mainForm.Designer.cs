@@ -41,29 +41,30 @@ namespace BD50_1_19_MySQL
             // 
             // dataGridView1
             // 
-            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(322, 11);
+            this.dataGridView1.Location = new System.Drawing.Point(263, 16);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(801, 185);
+            this.dataGridView1.Size = new System.Drawing.Size(801, 228);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // EditFormButton
             // 
-            this.EditFormButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.EditFormButton.AutoSize = true;
             this.EditFormButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.EditFormButton.BackColor = System.Drawing.Color.Transparent;
             this.EditFormButton.Depth = 0;
             this.EditFormButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditFormButton.Location = new System.Drawing.Point(56, 16);
+            this.EditFormButton.Location = new System.Drawing.Point(49, 46);
             this.EditFormButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.EditFormButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.EditFormButton.Name = "EditFormButton";
@@ -79,7 +80,7 @@ namespace BD50_1_19_MySQL
             this.checkBox1.AutoSize = true;
             this.checkBox1.Depth = 0;
             this.checkBox1.Font = new System.Drawing.Font("Roboto", 10F);
-            this.checkBox1.Location = new System.Drawing.Point(56, 85);
+            this.checkBox1.Location = new System.Drawing.Point(40, 135);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox1.MouseLocation = new System.Drawing.Point(-1, -1);
             this.checkBox1.MouseState = MaterialSkin.MouseState.HOVER;
@@ -98,7 +99,7 @@ namespace BD50_1_19_MySQL
             this.panel1.HorizontalScrollbarBarColor = true;
             this.panel1.HorizontalScrollbarHighlightOnWheel = false;
             this.panel1.HorizontalScrollbarSize = 8;
-            this.panel1.Location = new System.Drawing.Point(41, 117);
+            this.panel1.Location = new System.Drawing.Point(12, 167);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(244, 77);
@@ -134,7 +135,7 @@ namespace BD50_1_19_MySQL
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(1148, 206);
+            this.ClientSize = new System.Drawing.Size(1075, 255);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.EditFormButton);

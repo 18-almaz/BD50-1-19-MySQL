@@ -40,8 +40,11 @@ namespace BD50_1_19_MySQL
             // 
             // fio
             // 
+            this.fio.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.fio.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.fio.Location = new System.Drawing.Point(118, 107);
+            this.fio.Location = new System.Drawing.Point(37, 111);
             this.fio.Margin = new System.Windows.Forms.Padding(4);
             this.fio.Name = "fio";
             this.fio.Size = new System.Drawing.Size(492, 36);
@@ -50,9 +53,12 @@ namespace BD50_1_19_MySQL
             // 
             // comboBox1
             // 
+            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(118, 45);
+            this.comboBox1.Location = new System.Drawing.Point(37, 49);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(492, 37);
@@ -61,10 +67,13 @@ namespace BD50_1_19_MySQL
             // 
             // insertButton
             // 
+            this.insertButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.insertButton.AutoSize = true;
             this.insertButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.insertButton.Depth = 0;
-            this.insertButton.Location = new System.Drawing.Point(84, 171);
+            this.insertButton.Location = new System.Drawing.Point(27, 176);
             this.insertButton.Margin = new System.Windows.Forms.Padding(4);
             this.insertButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.insertButton.Name = "insertButton";
@@ -78,10 +87,13 @@ namespace BD50_1_19_MySQL
             // 
             // updateButton
             // 
+            this.updateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.updateButton.AutoSize = true;
             this.updateButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.updateButton.Depth = 0;
-            this.updateButton.Location = new System.Drawing.Point(278, 171);
+            this.updateButton.Location = new System.Drawing.Point(221, 176);
             this.updateButton.Margin = new System.Windows.Forms.Padding(4);
             this.updateButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.updateButton.Name = "updateButton";
@@ -95,10 +107,13 @@ namespace BD50_1_19_MySQL
             // 
             // deleteButton
             // 
+            this.deleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.deleteButton.AutoSize = true;
             this.deleteButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.deleteButton.Depth = 0;
-            this.deleteButton.Location = new System.Drawing.Point(473, 171);
+            this.deleteButton.Location = new System.Drawing.Point(416, 176);
             this.deleteButton.Margin = new System.Windows.Forms.Padding(4);
             this.deleteButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.deleteButton.Name = "deleteButton";
@@ -112,8 +127,11 @@ namespace BD50_1_19_MySQL
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 24);
+            this.label1.Location = new System.Drawing.Point(34, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(124, 17);
             this.label1.TabIndex = 4;
@@ -121,8 +139,11 @@ namespace BD50_1_19_MySQL
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 86);
+            this.label2.Location = new System.Drawing.Point(34, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(148, 17);
             this.label2.TabIndex = 5;
@@ -133,7 +154,7 @@ namespace BD50_1_19_MySQL
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Fuchsia;
-            this.ClientSize = new System.Drawing.Size(670, 226);
+            this.ClientSize = new System.Drawing.Size(564, 226);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.deleteButton);

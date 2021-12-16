@@ -15,10 +15,12 @@ namespace BD50_1_19_MySQL
     {
         public mainTYPEOBJECT()
         {
+            dataGridView1.ReadOnly = true;
             InitializeComponent();
             query = _query;
             LoadTable();
             LoadCombobox();
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         string query;
@@ -33,6 +35,7 @@ namespace BD50_1_19_MySQL
             DataTable oaDataTable = new DataTable();
             oaDataAdapter.Fill(oaDataTable);
             dataGridView1.DataSource = oaDataTable;
+            dataGridView1.Columns[0].Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)

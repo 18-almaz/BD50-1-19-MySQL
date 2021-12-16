@@ -55,6 +55,7 @@ namespace BD50_1_19_MySQL
             // 
             // button2
             // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button2.BackColor = System.Drawing.Color.Lime;
             this.button2.Location = new System.Drawing.Point(402, 96);
             this.button2.Name = "button2";
@@ -66,8 +67,9 @@ namespace BD50_1_19_MySQL
             // 
             // button3
             // 
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button3.BackColor = System.Drawing.Color.Lime;
-            this.button3.Location = new System.Drawing.Point(204, 96);
+            this.button3.Location = new System.Drawing.Point(204, 230);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(156, 61);
             this.button3.TabIndex = 2;
@@ -77,6 +79,7 @@ namespace BD50_1_19_MySQL
             // 
             // button5
             // 
+            this.button5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button5.BackColor = System.Drawing.Color.Lime;
             this.button5.Location = new System.Drawing.Point(564, 124);
             this.button5.Name = "button5";
@@ -88,6 +91,7 @@ namespace BD50_1_19_MySQL
             // 
             // button7
             // 
+            this.button7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button7.BackColor = System.Drawing.Color.Lime;
             this.button7.Location = new System.Drawing.Point(402, 230);
             this.button7.Name = "button7";
@@ -99,6 +103,7 @@ namespace BD50_1_19_MySQL
             // 
             // button8
             // 
+            this.button8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button8.BackColor = System.Drawing.Color.Lime;
             this.button8.Location = new System.Drawing.Point(564, 191);
             this.button8.Name = "button8";
@@ -110,6 +115,7 @@ namespace BD50_1_19_MySQL
             // 
             // button9
             // 
+            this.button9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button9.BackColor = System.Drawing.Color.Lime;
             this.button9.Location = new System.Drawing.Point(402, 163);
             this.button9.Name = "button9";
@@ -121,8 +127,9 @@ namespace BD50_1_19_MySQL
             // 
             // button10
             // 
+            this.button10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button10.BackColor = System.Drawing.Color.Lime;
-            this.button10.Location = new System.Drawing.Point(204, 163);
+            this.button10.Location = new System.Drawing.Point(204, 96);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(156, 61);
             this.button10.TabIndex = 9;
@@ -132,6 +139,7 @@ namespace BD50_1_19_MySQL
             // 
             // button11
             // 
+            this.button11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button11.BackColor = System.Drawing.Color.Lime;
             this.button11.Location = new System.Drawing.Point(42, 124);
             this.button11.Name = "button11";
@@ -143,8 +151,9 @@ namespace BD50_1_19_MySQL
             // 
             // button12
             // 
+            this.button12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button12.BackColor = System.Drawing.Color.Lime;
-            this.button12.Location = new System.Drawing.Point(204, 230);
+            this.button12.Location = new System.Drawing.Point(204, 163);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(156, 61);
             this.button12.TabIndex = 11;
@@ -154,6 +163,7 @@ namespace BD50_1_19_MySQL
             // 
             // button1
             // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.BackColor = System.Drawing.Color.Lime;
             this.button1.Location = new System.Drawing.Point(42, 191);
             this.button1.Name = "button1";
@@ -175,6 +185,8 @@ namespace BD50_1_19_MySQL
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(247, 297);
             this.pictureBox1.Name = "pictureBox1";
@@ -185,9 +197,10 @@ namespace BD50_1_19_MySQL
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(159, 53);
+            this.label2.Location = new System.Drawing.Point(159, 64);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(201, 20);
             this.label2.TabIndex = 16;
@@ -195,9 +208,10 @@ namespace BD50_1_19_MySQL
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(401, 53);
+            this.label3.Location = new System.Drawing.Point(398, 64);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(190, 20);
             this.label3.TabIndex = 17;
@@ -205,8 +219,11 @@ namespace BD50_1_19_MySQL
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(259, 429);
+            this.label4.BackColor = System.Drawing.Color.Black;
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Location = new System.Drawing.Point(259, 432);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(248, 17);
             this.label4.TabIndex = 18;
@@ -214,11 +231,12 @@ namespace BD50_1_19_MySQL
             // 
             // button4
             // 
+            this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button4.BackColor = System.Drawing.Color.Black;
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Location = new System.Drawing.Point(276, 12);
+            this.button4.Location = new System.Drawing.Point(272, 9);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(191, 27);
+            this.button4.Size = new System.Drawing.Size(218, 38);
             this.button4.TabIndex = 19;
             this.button4.Text = "О предприятии (нажмите)";
             this.button4.UseVisualStyleBackColor = false;
@@ -226,6 +244,7 @@ namespace BD50_1_19_MySQL
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(12, 309);
             this.pictureBox2.Name = "pictureBox2";
@@ -236,6 +255,7 @@ namespace BD50_1_19_MySQL
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(531, 309);
             this.pictureBox3.Name = "pictureBox3";
@@ -248,7 +268,7 @@ namespace BD50_1_19_MySQL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkOrchid;
+            this.BackColor = System.Drawing.Color.ForestGreen;
             this.ClientSize = new System.Drawing.Size(772, 458);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);

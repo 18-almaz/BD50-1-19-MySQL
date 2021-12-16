@@ -45,10 +45,10 @@
             this.panel1.HorizontalScrollbarBarColor = true;
             this.panel1.HorizontalScrollbarHighlightOnWheel = false;
             this.panel1.HorizontalScrollbarSize = 8;
-            this.panel1.Location = new System.Drawing.Point(41, 446);
+            this.panel1.Location = new System.Drawing.Point(12, 234);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(244, 174);
+            this.panel1.Size = new System.Drawing.Size(244, 95);
             this.panel1.TabIndex = 7;
             this.panel1.VerticalScrollbarBarColor = true;
             this.panel1.VerticalScrollbarHighlightOnWheel = false;
@@ -60,9 +60,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(32, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 17);
+            this.label1.Size = new System.Drawing.Size(124, 17);
             this.label1.TabIndex = 3;
-            this.label1.Text = "номер поставки техники";
+            this.label1.Text = "номер персонала";
             // 
             // comboBox1
             // 
@@ -80,7 +80,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Depth = 0;
             this.checkBox1.Font = new System.Drawing.Font("Roboto", 10F);
-            this.checkBox1.Location = new System.Drawing.Point(69, 371);
+            this.checkBox1.Location = new System.Drawing.Point(40, 174);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox1.MouseLocation = new System.Drawing.Point(-1, -1);
             this.checkBox1.MouseState = MaterialSkin.MouseState.HOVER;
@@ -94,13 +94,12 @@
             // 
             // EditFormButton
             // 
-            this.EditFormButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.EditFormButton.AutoSize = true;
             this.EditFormButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.EditFormButton.BackColor = System.Drawing.Color.Transparent;
             this.EditFormButton.Depth = 0;
             this.EditFormButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditFormButton.Location = new System.Drawing.Point(73, 29);
+            this.EditFormButton.Location = new System.Drawing.Point(49, 65);
             this.EditFormButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.EditFormButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.EditFormButton.Name = "EditFormButton";
@@ -119,12 +118,12 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(340, 14);
+            this.dataGridView1.Location = new System.Drawing.Point(266, 11);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(801, 606);
+            this.dataGridView1.Size = new System.Drawing.Size(713, 318);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -133,7 +132,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1182, 634);
+            this.ClientSize = new System.Drawing.Size(984, 340);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.EditFormButton);

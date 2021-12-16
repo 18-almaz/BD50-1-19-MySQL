@@ -18,6 +18,8 @@ namespace BD50_1_19_MySQL
             InitializeComponent();
             LoadCombobox();
             insertButton.Visible = true;
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+ 
         }
         int id;
 
